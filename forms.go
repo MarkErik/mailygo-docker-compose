@@ -12,12 +12,12 @@ type FormValues map[string][]string
 
 func FormHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
-		_, _ = w.Write([]byte("MailyGo works!"))
+		_, _ = w.Write([]byte("Active.\n"))
 		return
 	}
 	if r.Method != http.MethodPost {
 		w.WriteHeader(http.StatusMethodNotAllowed)
-		_, _ = w.Write([]byte("The HTTP method is not allowed, make a POST request"))
+		_, _ = w.Write([]byte("HTTP not allowed.\n"))
 		return
 	}
 	_ = r.ParseForm()
