@@ -1,5 +1,5 @@
 FROM golang:alpine as build
-RUN apk add --no-cache gcc musl-dev tzdata
+RUN apk add --no-cache gcc musl-dev tzdata git
 ADD . /app
 WORKDIR /app
 RUN go build
