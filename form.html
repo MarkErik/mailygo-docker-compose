@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  		<title>Test-Form</title>
+	</head>
+	<body>
+  		<form action="//localhost:8080" method="post">
+    		<input type="hidden" name="_to" value="test@example.com">
+    		<input type="hidden" name="_formName" value="Test Form">
+			<input type="hidden" name="_redirectTo" value="https://example.com">
+			<input type="hidden" name="_token" value="a3B2c1">
+			<label for="TEmail" style="display: none;">Test</label>
+			<input id="TEmail" type="email" name="_t_email" style="display: none;">
+			<label for="Email">Email</label>
+    		<br />
+    		<input id="Email" type="email" name="_replyTo" required>
+    		<br />
+    		<label for="Name">Name</label>
+    		<br />
+    		<input id="Name" type="text" name="_name" required>
+			<br />
+			<label for="Subject">Subject</label>
+    		<br />
+    		<input id="Subject" type="text" name="_subject" required>
+    		<br />
+			<label for="Message">Message</label>
+			<br />
+        	<textarea id="Message" name="_message"></textarea>
+			<br />
+			<label for="Website">Website</label>
+    		<br />
+    		<input id="Website" type="text" name="Website" required>
+    		<br />
+    		<input type="submit" value="Send">
+  		</form>
+	</body>
+</html>
+
