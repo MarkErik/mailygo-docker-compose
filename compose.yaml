@@ -1,0 +1,27 @@
+services:
+
+  form-mail:
+    build: .
+    container_name: form-mail
+    restart: unless-stopped
+    environment:
+      # SMTP settings
+      SMTP_HOST:
+      SMTP_PORT:
+      SMTP_USER:
+      SMTP_PASS:
+      EMAIL_FROM:
+      EMAIL_TO:
+      ALLOWED_TO:
+      #NGINX PROXY settings
+      VIRTUAL_HOST:
+      LETSENCRYPT_HOST:
+      LETSENCRYPT_EMAIL: 
+    networks:
+      - outside
+
+networks:
+  outside:
+    external:
+      name: services
+
