@@ -1,7 +1,8 @@
 services:
 
   form-mail:
-    build: .
+    build:
+      context: ./go-code
     container_name: form-mail
     restart: unless-stopped
     environment:
@@ -13,6 +14,9 @@ services:
       EMAIL_FROM:
       EMAIL_TO:
       ALLOWED_TO:
+      TOKEN:
+      SPAMLIST: gambling,casino
+      DENYLIST: submit
       #NGINX PROXY settings
       VIRTUAL_HOST:
       LETSENCRYPT_HOST:
